@@ -12,3 +12,7 @@ if __name__ == "__main__":
             result_list = trans_text.iteration_reader()
             for result in result_list:
                 logger.info(result.text)
+                
+    """
+        Next, result translate write into txt file again
+    """
