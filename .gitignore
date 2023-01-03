@@ -1,1 +1,3 @@
 .vscode
+venv
+src/service/__pycache__
