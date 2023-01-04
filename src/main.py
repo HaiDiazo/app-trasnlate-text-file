@@ -25,7 +25,3 @@ if __name__ == "__main__":
                         else:
                             write_file.write(result.text.replace("{path_break}", "\n"))
                     write_file.close()
-                    
-    """
-        Next, result translate write into txt file again
-    """
