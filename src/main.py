@@ -1,4 +1,3 @@
-from loguru import logger
 from service.translate_service import TranslateApp
 from argparse import ArgumentParser
 import os
