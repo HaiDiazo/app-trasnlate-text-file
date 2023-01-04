@@ -11,10 +11,9 @@ class TranslateApp:
     
     def iteration_reader(self) -> list:
         for reader in self.__read_text:
-            if reader != "\r\n":
-                self.__ready_translate.append(reader)
-            
-            if len(self.__ready_translate) == 4:
+            self.change_break_string(reader)
+
+            if len(self.__ready_translate) == 10:
                 self.__result_trasnlate.extend(self.translate_text())
                 self.__ready_translate.clear()
         
@@ -24,6 +23,12 @@ class TranslateApp:
         
         return self.__result_trasnlate
     
+
+    def change_break_string(self, reader: str):
+        if reader == "\r\n":
+            reader = reader.replace("\r\n", "{path_break}")
+        self.__ready_translate.append(reader)
+
 
     def translate_text(self) -> list[str]:
         logger.info(self.__ready_translate)
