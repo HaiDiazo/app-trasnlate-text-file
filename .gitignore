@@ -1,5 +1,5 @@
 .vscode
 venv
 src/service/__pycache__
-src/test-txt/result
-src/test-srt/result
+test/test-txt/result
+test/test-srt/result
