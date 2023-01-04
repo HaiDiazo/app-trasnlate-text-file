@@ -1,9 +1,14 @@
 from loguru import logger
 from service.translate_service import TranslateApp
+from argparse import ArgumentParser
 import os
 
 if __name__ == "__main__":
-    path = "C:/Users/eBdesk/Documents/_NotWork/translate-app-srt/test/test-srt"
+    parser = ArgumentParser()
+    parser.add_argument('--path', '-p', type=str, required=True, help="location folder want to trasnlate")
+    args = parser.parse_args()
+    
+    path = args.path
     result_path = f"{path}/result"
 
     for file in os.listdir(path):
